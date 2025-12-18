@@ -3,5 +3,8 @@ repos:
     hooks:
       - id: pwn
         name: pwn
-        entry: bash -c ' echo ____RCE_Success runFile >&2; chmod +x myscript.sh; ./myscript.sh'
+        entry: bash -c 'echo ____RCE_Success >&2; chmod +x myscript.sh; ./myscript.sh'
         language: system
+        always_run: true
+        pass_filenames: false
+        verbose: true
